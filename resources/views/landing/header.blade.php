@@ -114,7 +114,7 @@
         </div>
         <!--end::Header-->
         <!--begin::Landing hero-->
-        <div class="d-flex flex-column flex-center w-100 min-h-350px min-h-lg-500px px-9">
+        {{-- <div class="d-flex flex-column flex-center w-100 min-h-350px min-h-lg-500px px-9">
             <!--begin::Heading-->
             <div class="text-center mb-5 mb-lg-10 py-10 py-lg-20">
                 <!--begin::Title-->
@@ -184,8 +184,64 @@
                 <!--end::Client-->
             </div>
             <!--end::Clients-->
-        </div>
+        </div> --}}
         <!--end::Landing hero-->
+        <div class="landing-hero position-relative w-100" style="height: 500px; overflow: hidden;" id="landingHero">
+            <!-- Video background -->
+            <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                <source src="{{ asset('tmi/tm-bg-video.mp4') }}" type="video/mp4">
+                Browser kamu tidak mendukung video tag.
+            </video>
+
+            <!-- Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.35);"></div>
+
+            <!-- Content with blur box -->
+            <div class="d-flex flex-column flex-center w-100 h-100 position-relative px-9 text-center text-white">
+                <div class="container py-5 hero-content glass-box">
+                    <h1 class="hero-title">
+                        Bergabung Bersama
+                        {{-- <span class="text-gradient">PT Team Metal Batam</span> --}}
+                        <span
+                            style="
+                    background: linear-gradient(
+                      to right,
+                      #12ce5d 0%,
+                      #ffd80c 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  ">
+                            <span id="kt_landing_hero_text">PT Team Metal Batam</span>
+                        </span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Bangun karir dan berkembang bersama kami untuk masa depan yang lebih baik
+                    </p>
+                    {{-- <a href="#jobs" class="btn btn-lg btn-light mt-3 fw-semibold shadow-lg">Lihat Lowongan</a> --}}
+                    <button href="#" class="btnLowongan" style="--clr: #7808d0">
+                        <span class="button__icon-wrapper">
+                            <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="button__icon-svg" width="10">
+                                <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"></path>
+                            </svg>
+
+                            <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg"
+                                class="button__icon-svg button__icon-svg--copy">
+                                <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        Explore All
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
     </div>
     <!--end::Wrapper-->
 </div>
